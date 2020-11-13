@@ -15,7 +15,3 @@ RUN tar xf kernel-dev.tar
 WORKDIR /kmod
 COPY ./* ./
 RUN make all
-
-FROM scratch
-COPY --from=build /kmod/example.ko /
-COPY --chmod=0755 example /etc/init.d/example
