@@ -3,7 +3,7 @@
 # In the last stage, it creates a package, which can be used for
 # testing.
 
-FROM linuxkit/kernel:5.4.39-f39f83d0d475b274938c86eaa796022bfc7063d2-amd64 AS ksrc
+FROM docker/for-desktop-kernel:5.10.25-6594e668feec68f102a58011bb42bd5dc07a7a9b AS ksrc
 
 # Extract headers and compile module
 FROM linuxkit/alpine:e2391e0b164c57db9f6c4ae110ee84f766edc430 AS build
