@@ -6,22 +6,22 @@ The example is taken from [the linuxkit test case](https://github.com/linuxkit/l
 ## Preliminaries
 
 Install [Docker Desktop stable](https://hub.docker.com/editions/community/docker-ce-desktop-windows/).
-I am using 2.5.0.1.
+I am using 3.5.2.
 
 If you are running Windows, switch to the Hyper-V based engine (not WSL 2). The kernel
-version used in Docker Desktop 2.5.0.1 is 5.4.39 whereas Microsoft currently ships 4.19.104.
+version used in Docker Desktop 3.5.2 is 5.10.47 whereas Microsoft currently ships 4.19.104.
 
 To check your kernel version:
 ```
-PS > docker run alpine uname -a
-Linux 6ad9784a94c6 5.4.39-linuxkit #1 SMP Fri May 8 23:03:06 UTC 2020 x86_64 Linux
+% docker run alpine uname -a
+Linux 4eb10ad079ef 5.10.25-linuxkit #1 SMP PREEMPT Tue Mar 23 09:24:45 UTC 2021 aarch64 Linux
 ```
 
 ## Build the module
 
 ```
-PS > cd kernel
-PS > docker build -t kernel-module .
+% cd kernel
+% docker build -t kernel-module .
 ```
 
 ## Load the kernel module
